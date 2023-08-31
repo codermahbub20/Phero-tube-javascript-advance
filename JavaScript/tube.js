@@ -25,7 +25,7 @@ const handleClickData = async(categoryId) =>{
     console.log(data.data);
 
     const cardBody = document.getElementById('card-body');
-
+    cardBody.innerHTML = "";
     data.data.forEach(allData => {
         console.log(allData);
         const div = document.createElement('div');
@@ -39,7 +39,8 @@ const handleClickData = async(categoryId) =>{
                     </div>
                     <h2 class="card-title">
                     <p>${allData.authors[0].profile_name}</p>
-                        <div class="badge badge-secondary">NEW</div>
+                    <img class="h-5 w-5 rounded-full" src="${allData?.authors[0]?.verified &&'blue.svg'}" alt="">
+
                     </h2>
                     <p>${allData.others.views}  Views</p>
                 </div>
@@ -50,3 +51,4 @@ const handleClickData = async(categoryId) =>{
 }
 
 loadData();
+handleClickData(1000);
