@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phero Tube</title>      
+    <title>Phero Tube</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./Logo.png" type="image/x-icon">
 
 </head>
+
 <body>
-    
+
+    <header>
+        <!-- Nav Bar Section -->
+        <div class="navbar container mx-auto py-5 px-10 bg-base-100">
+            <div class="navbar-start">
+                <!--  -->
+                <img src="./Logo.png" alt="">
+            </div>
+            <div class="navbar-center bg-slate-400 py-2 rounded-lg px-2">
+                <button>Sort by View</button>
+            </div>
+            <div class="navbar-end">
+                <a class="btn btn-error text-white">Blog</a>
+            </div>
+        </div>
+        <hr class="h-3">
+    </header>
+
+    <main>
+
+        <!-- card section here  -->
+        <section>
+            <div id="card-container" class="flex justify-center gap-5">
+            </div>
+        </section>
+
+        <section>
+            <div id="card-body" class="grid grid-cols-4  gap-5">
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
 
     <script src="./JavaScript/tube.js"></script>
 </body>
+
 </html>
