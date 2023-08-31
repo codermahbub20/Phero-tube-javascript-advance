@@ -31,17 +31,17 @@ const handleClickData = async(categoryId) =>{
         const div = document.createElement('div');
         div.innerHTML = `
                 <div class="card  bg-base-100 shadow-xl">
-                <figure><img src=${allData.thumbnail} alt="Shoes" /></figure>
+                <figure><img class ="w-80 h-52" src=${allData.thumbnail} alt="Shoes" /></figure>
                 <div class="card-body">
-                    <div class="flex">
-                        <img src= alt="">
-                        <h5></h5>
+                    <div class="flex gap-1">
+                        <img class ="h-10 w-10 rounded-full" src=${allData.authors[0].profile_picture} alt="">
+                        <h5 class ="text-xl font-bold ">${allData.title}</h5>
                     </div>
                     <h2 class="card-title">
-                        Shoes!
+                    <p>${allData.authors[0].profile_name}</p>
                         <div class="badge badge-secondary">NEW</div>
                     </h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>${allData.others.views}  Views</p>
                 </div>
             </div>
         `
