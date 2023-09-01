@@ -12,7 +12,7 @@ const displayData =  (shows) => {
 
         const div = document.createElement("div");
         div.innerHTML = `
-        <a onclick="handleClickData('${show.category_id}')" class="tab">${show.category}</a> 
+        <a onclick="handleClickData('${show.category_id}')" class="tab rounded-lg bg-[#FF1F3D] text-white font-bold">${show?.category}</a> 
         `
         cardContainer.appendChild(div);
     });
@@ -31,14 +31,17 @@ const handleClickData = async(categoryId) =>{
         const div = document.createElement('div');
         div.innerHTML = `
                 <div class="card  bg-base-100 shadow-xl">
-                <figure><img class ="w-80 h-52" src=${allData.thumbnail} alt="Shoes" /></figure>
+                <figure><img class ="w-80 h-52" src=${allData?.thumbnail} alt="Shoes" /></figure>
                 <div class="card-body">
                     <div class="flex gap-1">
-                        <img class ="h-10 w-10 rounded-full" src=${allData.authors[0].profile_picture} alt="">
-                        <h5 class ="text-xl font-bold ">${allData.title}</h5>
+                        <div>
+                        <img class ="h-10 w-10 rounded-full" src=${allData?.authors[0]?.profile_picture} alt="">
+                        <p class="absolute sm:mt-96 md:-mt-32 md:ml-32 lg:-mt-28 lg:ml-28 text-white bg-slate-900 px-2 py-1 rounded-lg">${parseInt(allData?.others?.posted_date/3600)} Hours ${parseInt(allData?.others?.posted_date % 3600/60)} Minute </p>
+                        </div>
+                        <h5 class ="text-xl font-bold ">${allData?.title}</h5>
                     </div>
                     <h2 class="card-title">
-                    <p>${allData.authors[0].profile_name}</p>
+                    <p>${allData?.authors[0]?.profile_name}</p>
                     <img class="h-5 w-5 rounded-full" src="${allData?.authors[0]?.verified &&'blue.svg'}" alt="">
 
                     </h2>
