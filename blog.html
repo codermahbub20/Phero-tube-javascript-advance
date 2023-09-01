@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Nav Bar Section -->
+        <div class="navbar container mx-auto sm:py-0 sm:px-0 md:py-1 md:px-5 lg:py-5 lg:px-10 bg-base-100">
+            <div class="navbar-start">
+                <!--  -->
+                <img src="./Logo.png" alt="">
+            </div>
+            <div class="navbar-center bg-slate-400 lg:py-2 rounded-lg lg:px-2">
+                <button onclick="sortByView()">Sort by View</button>
+            </div>
+            <div class="navbar-end">
+                <a class="btn btn-error text-white" onclick="clickBack()">Back</a>
+            </div>
+        </div>
+        <hr class="h-3">
+    </header>
+
+    <main>
+        <section class="w-6/12 mx-auto">
+            <h1 class="text-xl font-bold text-center">1.Discuss the scope of var, let, and const ?</h1>
+            <p class="text-xl">Ans: In JavaScript, var, let, and const are used to declare variables, but they have
+                different scopes and behaviors. <br><span class="text-2xl font-bold text-red-600">var:</span>
+
+                Function Scope: Variables declared with var are function-scoped. This means they are accessible anywhere
+                within the function in which they are declared, but not outside of it. <br>
+                Hoisting: Variables declared with var are hoisted to the top of their containing function or global
+                scope. This means you can access a var variable before it's declared in code, but its value will be
+                undefined until the actual declaration. <br><br>
+                No Block Scope: Unlike let and const, var does not have block-level scope. This means variables declared
+                with var inside blocks (e.g., if, for, or while statements) are still accessible outside of those
+                blocks.</p><br><br>
+
+            <p class="text-xl"><span class="text-2xl font-bold text-red-600">let:</span>
+                let declarations are block-scoped. This means that a variable declared with let is only visible within
+                the block (enclosed by curly braces) in which it's declared. This includes blocks like if, for, while,
+                and functions. <br><br>
+                Variables declared with let are also hoisted, but they are not initialized until the actual declaration
+                statement is encountered. This prevents accessing the variable before it's declared and gives rise to
+                the "Temporal Dead Zone" (TDZ). <br><br>
+                let variables cannot be redeclared within the same scope.</p><br><br>
+
+            <p class="text-xl"><span class="text-2xl font-bold text-red-600">const:</span>
+
+                const is also introduced in ES6, and it is used to declare constants, whose values cannot be reassigned
+                after initialization. <br><br>
+                Like let, const variables have block-level scope, but they are also not hoisted. <br><br>
+                When you declare a variable with const, you must assign a value to it at the same time, and you cannot
+                reassign it later.</p><br><br>
+
+            <h1 class="text-xl font-bold text-center">2.Tell us the use cases of null and undefined ?</h1> <br><br>
+
+            <p class="text-xl"><span class="text-2xl font-bold text-red-600">undefined: </span>In JavaScript, null and
+                undefined are two distinct primitive values, and they are often used to represent missing or empty
+                values. While they are similar in some ways, they have different use cases:
+
+                undefined:
+
+                undefined is a primitive value in JavaScript that indicates a variable has been declared but has not
+                been assigned a value.
+                It is also the default value of function parameters that are not provided.</p><br><br>
+
+            <p class="text-xl"> <span class="text-2xl font-bold text-red-600">NULL: </span>null is a value in JavaScript
+                that represents the intentional absence of any object value or a variable pointing to no object.
+                It is often used to indicate that a variable should be empty or have no value.</p><br><br>
+
+            <h1 class="text-xl font-bold text-center">3.What do you mean by REST API? ?</h1> <br><br>
+
+            <p class="text-xl">REST API, which stands for Representational State Transfer Application Programming Interface, is a set of architectural principles and constraints for designing and interacting with web services. It is a widely used and popular approach for building web services because of its simplicity, scalability, and ease of use. REST is not a specific technology or protocol; rather, it's a set of guidelines and best practices for creating web services that can be easily consumed by clients.
+
+                Here are the key principles and characteristics of RESTful APIs:
+                
+                <span class="text-2xl font-bold text-red-600">Statelessness:</span> Each request from a client to a server must contain all the information needed to understand and process the request. The server should not rely on any previous requests or store session information about the client. This makes REST APIs scalable and easy to cache. <br><br>
+                
+                <span class="text-2xl font-bold text-red-600">Client-Server Architecture:</span> REST separates the client and server, allowing them to evolve independently. The client and server communicate over a standard interface, typically using HTTP methods. <br><br>
+                
+               <span class="text-2xl font-bold text-red-600"> Uniform Interface:</span> REST APIs have a consistent and uniform interface, which simplifies both client and server components. This uniformity includes the use of standard HTTP methods (GET, POST, PUT, DELETE) for actions and the use of URLs (Uniform Resource Locators) to identify resources. <br><br>
+                
+                <span class="text-2xl font-bold text-red-600">Resource-Based:</span> Resources are the core concept in REST. Each resource is identified by a unique URI (Uniform Resource Identifier), and clients interact with these resources using standard HTTP methods. Resources can represent data objects, services, or anything else that can be named. <br><br>
+                
+                <span class="text-2xl font-bold text-red-600">Representation:</span> Resources can have multiple representations, such as JSON, XML, HTML, or plain text. Clients can request the representation that best suits their needs, and servers can send different representations of the same resource based on client requests. <br><br>
+                
+               <span class="text-2xl font-bold text-red-600"> Stateless Communication:</span> REST APIs use stateless communication, meaning each request from the client to the server must contain all the necessary information. Sessions and state information are typically managed on the client side. <br><br>
+                
+                <span class="text-2xl font-bold text-red-600">Layered System:</span> The architecture can include multiple layers, such as load balancers, caching, and gateways, to improve scalability, security, and performance without affecting the overall system behavior. <br><br>
+                
+                <span class="text-2xl font-bold text-red-600">Cacheable:</span> Responses from the server can be explicitly marked as cacheable or non-cacheable, which helps improve performance by reducing redundant requests. <br> <br>
+                
+                Self-Descriptive Messages: Responses should include metadata and hyperlinks to help clients discover and navigate the API. This allows clients to understand the API's capabilities without prior knowledge. <br><br>
+                
+                <span class="text-2xl font-bold text-red-600">Stateless Communication:</span> REST APIs use stateless communication, meaning each request from the client to the server must contain all the necessary information. Sessions and state information are typically managed on the client side. <br><br>
+                
+                RESTful APIs are commonly used in web and mobile applications to retrieve, create, update, and delete data from servers. They are known for their simplicity and ease of use, making them a popular choice for building modern web services.</p>
+
+            <h1 class="text-center mt-10 text-2xl font-extrabold text-red-600">Side Note: My English Is Very Bad. 100%
+                content copy In Google</h1>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="./JavaScript/tube.js"></script>
+</body>
+
+</html>
