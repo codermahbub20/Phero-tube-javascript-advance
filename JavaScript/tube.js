@@ -25,7 +25,9 @@ const handleClickData = async(categoryId) =>{
     console.log(data.data);
 
     const cardBody = document.getElementById('card-body');
+    const cardBody2 = document.getElementById('card-body-2');
     cardBody.innerHTML = "";
+    cardBody2.innerHTML = ""
     data.data.forEach(allData => {
         console.log(allData);
         const div = document.createElement('div');
@@ -53,7 +55,23 @@ const handleClickData = async(categoryId) =>{
         
         cardBody.appendChild(div);
     });
+    const div2 = document.createElement("div");
+    if(data.data.length == 0){
+        
+        
+        document.getElementById('card-body').removeAttribute = ("lg:grid-cols-4");
+    div2.innerHTML = `
+        <div class="flex justify-center mt-10">
+        <img class="h-56 w-56 mt-10 rounded-full" src="icon.png" alt="">
+       
+        </div>
+    <h1 class="text-center text-3xl font-extrabold">Oops!! Sorry, There is no <br> content here</h1>
 
+    `
+    cardBody2.appendChild(div2)
+    
+    }
+     
 }
 
 function clickMe(){
